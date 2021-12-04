@@ -1,40 +1,15 @@
-import express from "express";
-import {
-  currentUserRouter,
-  signinRouter,
-  signoutRouter,
-  signupRouter,
-} from "./routes";
-import { errorHandler } from "./middlewares/errorHandler";
-import { NotFoundError } from "./errors/notFound";
-import "express-async-errors";
 import mongoose from "mongoose";
-
-const app = express();
-app.use(express.json());
-
-app.use(currentUserRouter);
-app.use(signinRouter);
-app.use(signoutRouter);
-app.use(signupRouter);
-
-// for async use next
-// app.all('*',async(req,res,next)=>{
-//      next(new NotFoundError())
-// })
-
-//when function is sync
-// but when installed express-async-erros module it works
-
-app.all("*", async () => {
-  throw new NotFoundError();
-});
-
-app.use(errorHandler);
+import {app} from "./app"
 
 const start = async () => {
+  if(!process.env.JWT_KEY){
+    throw new Error('JWT_KEY must be defined')
+  }
+  if(!process.env.MONGO_URI){
+    throw new Error('MONGO_URI must be defined')
+  }
   try {
-    await mongoose.connect("mongodb://auth-mongo-srv:27017/auth");
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to mongodb");
   } catch (err) {
     console.error(err);
