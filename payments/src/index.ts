@@ -1,11 +1,8 @@
 import mongoose from "mongoose";
 import { app } from "./app";
 import { natsWrapper } from "./natsWrapper";
-import {Subject} from "@teronpackages/common"
-import {TicketCreatedListener} from "./events/listeners/ticketCreatedListeners"
-import {TicketUpdatedListener} from "./events/listeners/ticketupdatedListener"
-import {ExpirationCompleteListener} from "./events/listeners/expirationCompleteListener"
-import {PaymentCreatedListener} from "./events/listeners/paymentCreatedListener"
+import {OrderCancelledListener} from "./events/listeners/orderCancelledListener"
+import {OrderCreatedListener} from "./events/listeners/orderCreatedListener"
 
 
 const start = async () => {
@@ -39,15 +36,13 @@ const start = async () => {
       process.exit();
     });
 
+    new OrderCreatedListener(natsWrapper.client).listen()
+    new OrderCancelledListener(natsWrapper.client).listen()
     
     process.on("SIGTERM", () => natsWrapper.client.close());
     process.on("SIGINT", () => natsWrapper.client.close());
 
     
-    new TicketCreatedListener(natsWrapper.client).listen()
-    new TicketUpdatedListener(natsWrapper.client).listen()
-    new ExpirationCompleteListener(natsWrapper.client).listen()
-    new PaymentCreatedListener(natsWrapper.client).listen()
 
     await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to mongodb");
