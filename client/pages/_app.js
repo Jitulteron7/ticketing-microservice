@@ -1,12 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from '../api/build-client';
 import Header from '../components/header';
+import Footer from '../components/footer';
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
-    <div className="container">
-      <Header currentUser={currentUser} />
+    <div>
+    <Header currentUser={currentUser} />
+    <div className="container" style={{margin:"5% auto"}}>
       <Component currentUser={currentUser} {...pageProps} />
+    </div>
+    <Footer currentUser={currentUser}/>
     </div>
   );
 };

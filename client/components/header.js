@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+
 export default ({ currentUser }) => {
   const links = [
     !currentUser && { label: 'Sign Up', href: '/auth/signup' },
@@ -13,16 +14,16 @@ export default ({ currentUser }) => {
       return (
         <li key={href} className="nav-item">
           <Link href={href}>
-            <a className="nav-link">{label}</a>
+            <a className={"nav-link"} style={{color:"#fff"}}>{label}</a>
           </Link>
         </li>
       );
     });
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav style={{padding:"1% 3%",marginBottom:"3%",backgroundColor:"#adb5bd"}} className="navbar navbar-light" >
       <Link href="/">
-        <a className="navbar-brand">GitTix</a>
+        <a style={{color:"#fff",fontWeight:"bold"}} className="navbar-brand">Book My Ticket</a>
       </Link>
 
       <div className="d-flex justify-content-end">
