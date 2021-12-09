@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default ({ req }) => {
-  if (typeof window === 'undefined') {
+  if (false) {
     // We are on the server
 
     return axios.create({

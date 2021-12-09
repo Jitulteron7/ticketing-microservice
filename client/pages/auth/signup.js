@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import useRequest from '../../hooks/use-request';
 
-export default () => {
+export default ({currentUser}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { doRequest, errors } = useRequest({
@@ -14,7 +14,11 @@ export default () => {
     },
     onSuccess: () => Router.push('/')
   });
-
+useEffect(()=>{
+  if(currentUser){
+    Router.push('/') 
+  }
+},[])
   const onSubmit = async event => {
     event.preventDefault();
 
@@ -22,7 +26,7 @@ export default () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form style={{ width: "60%", margin: "3% auto" }} onSubmit={onSubmit}>
       <h1>Sign Up</h1>
       <div className="form-group">
         <label>Email Address</label>
@@ -41,8 +45,12 @@ export default () => {
           className="form-control"
         />
       </div>
-      {errors}
+      <center style={{ margin: "3% auto" }}>{errors}</center>
+      <center style={{ margin: "3% auto" }}>
       <button className="btn btn-primary">Sign Up</button>
+      </center>
+      
+      
     </form>
   );
 };

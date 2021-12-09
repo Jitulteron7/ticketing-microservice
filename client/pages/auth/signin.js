@@ -1,34 +1,40 @@
-import { useState, useEffect } from 'react';
-import Router from 'next/router';
-import useRequest from '../../hooks/use-request';
+import { useState, useEffect } from "react";
+import Router from "next/router";
+import useRequest from "../../hooks/use-request";
 
-export default () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+export default ({currentUser}) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { doRequest, errors } = useRequest({
-    url: '/api/users/signin',
-    method: 'post',
+    url: "/api/users/signin",
+    method: "post",
     body: {
       email,
-      password
+      password,
     },
-    onSuccess: () => Router.push('/')
+    onSuccess: () => Router.push("/"),
   });
 
-  const onSubmit = async event => {
+  useEffect(()=>{
+    if(currentUser){
+      Router.push('/') 
+    }
+  },[])
+
+  const onSubmit = async (event) => {
     event.preventDefault();
 
     await doRequest();
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form style={{ width: "60%", margin: "3% auto" }} onSubmit={onSubmit}>
       <h1>Sign In</h1>
       <div className="form-group">
         <label>Email Address</label>
         <input
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className="form-control"
         />
       </div>
@@ -36,13 +42,16 @@ export default () => {
         <label>Password</label>
         <input
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           type="password"
           className="form-control"
         />
       </div>
-      {errors}
-      <button className="btn btn-primary">Sign In</button>
+
+      <center style={{ margin: "3% auto" }}>{errors}</center>
+      <center style={{ margin: "3% auto" }}>
+        <button className="btn btn-primary">Sign In</button>
+      </center>
     </form>
   );
 };

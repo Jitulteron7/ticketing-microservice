@@ -1,0 +1,1 @@
+{"c":["pages/tickets/new","webpack"],"r":["pages/tickets/[ticketId]"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Ftickets%2F%5BticketId%5D&absolutePagePath=C%3A%5CUsers%5CAsus%5CDesktop%5CnewDev%5CadvNode%5Cmicroservices%5CTicketing%5Cclient%5Cpages%5Ctickets%5C%5BticketId%5D.js!","./pages/tickets/[ticketId].js"]}

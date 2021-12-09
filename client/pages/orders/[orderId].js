@@ -33,13 +33,17 @@ const OrderShow = ({ order, currentUser }) => {
     return <div>Order Expired</div>;
   }
 
-  return <div>Time left to pay before expiration: {timeLeft} seconds
+  return <div style={{width:"50%", margin:"3% auto"}}>
+  <h3>Time left to pay before expiration: {timeLeft} seconds</h3>
+  <div style={{margin:"4%",display:"flex",justifyContent:"center",alignItems:"center"}}>
   <StripeCheckout
+      
       token={({id})=>doRequest({token:id})}
       stripeKey="pk_test_51K3YmtSI9bODyotVJO773h9OSZFNx0I3GUX7aSbujs8FZtqqZOmoRn3o88sNDZbXrkheE0KfdY3yIwVElyGYcAgz00gdwSCUMg"
       amount={order.ticket.price*100}
       email={currentUser.email}
   />
+  </div>
   {errors}
   </div>;
 };
@@ -47,6 +51,14 @@ const OrderShow = ({ order, currentUser }) => {
 OrderShow.getInitialProps = async (context, client) => {
   const { orderId } = context.query;
   const { data } = await client.get(`/api/orders/${orderId}`);
+//   const data = {
+//     ticket:{
+//         id:123,
+//     title:"testing 1",
+//     price:20
+//     },
+//     status:"cancell"
+// }
 
   return { order: data };
 };

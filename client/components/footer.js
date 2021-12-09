@@ -6,7 +6,7 @@ export default ({ currentUser }) => {
   
 
   return (
-    <div className="row" style={{width:"100%",backgroundColor:"#adb5bd",padding:"3% 6%"}}>
+    <div className="row" style={{width:"100%",backgroundColor:"#adb5bd",padding:"3% 6%",margin:"0"}}>
     <div className="col">
       <ul className='nav  align-items-center' style={{display:"list-item",justifyContent:"center",alignItems:"center"}}>
       <li style={{margin:"3% 0"}} key={1} className="nav-item">

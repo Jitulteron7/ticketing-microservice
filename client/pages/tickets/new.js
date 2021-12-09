@@ -44,8 +44,8 @@ import Router from 'next/router';
 
     return(
     <div>
-    <h1>Create a ticket</h1>
-        <form onSubmit={handleSubmit}>
+    <center><h1>Create a ticket</h1></center>
+        <form style={{width:"60%",margin:"3% auto"}} onSubmit={handleSubmit}>
             <div className="form-group">
                 <label>Title</label>
                 <input
@@ -67,8 +67,12 @@ import Router from 'next/router';
                     className={"form-control"}
                 />
             </div>
+            <center style={{margin:"3% auto"}}>
             {errors}
+            </center>
+            <center style={{margin:"3% auto"}}>
             <button className="btn btn-primary">Submit</button>
+            </center>
         </form>
     </div>)
 }

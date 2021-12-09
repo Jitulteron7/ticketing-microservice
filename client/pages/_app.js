@@ -18,6 +18,11 @@ const AppComponent = ({ Component, pageProps, currentUser }) => {
 AppComponent.getInitialProps = async appContext => {
   const client = buildClient(appContext.ctx);
   const { data } = await client.get('/api/users/currentuser');
+  // const data  = {currentUser:{
+  //   userId:"123123",
+  //   email:"jitulteron9@gmail.com",
+  //   id:"12323345"
+  // }}
 
   let pageProps = {};
   if (appContext.Component.getInitialProps) {
