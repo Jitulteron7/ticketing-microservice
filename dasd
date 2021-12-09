@@ -1,0 +1,50 @@
+0ac92cf - Jitul Teron, 21 hours ago : manitest gain
+6cfd2ec - Jitul Teron, 21 hours ago : yaml test
+237008c - Jitul Teron, 21 hours ago : manifest delet
+f5eb0fc - Jitul Teron, 21 hours ago : manifest
+ae0ee15 - Jitul Teron, 21 hours ago : updated start msg
+ebd5045 - Jitul Teron, 21 hours ago : test
+871c33b - Jitul Teron, 21 hours ago : testin master clear
+6515ec0 - Jitul Teron, 21 hours ago : test auth-depl 4clear
+cbd3d6d - Jitul Teron, 21 hours ago : test auth-depl 3
+d573d78 - Jitul Teron, 21 hours ago : test auth-depl 2
+203ead0 - Jitul Teron, 21 hours ago : test auth-depl
+3b47b82 - Jitul Teron, 22 hours ago : github action deploy
+11ba3b6 - Jitul Teron, 22 hours ago : deploy-auth refactoring
+ede8e00 - Jitul Teron, 22 hours ago : deployment auth token space
+f7d7384 - Jitul Teron, 22 hours ago : deployment github action
+0bed1f0 - Jitul Teron, 22 hours ago : testing
+e9dc6f3 - Jitul Teron, 22 hours ago : deploy-manifest setup
+26c7da5 - Jitul Teron, 22 hours ago : Merge pull request #5 from Jitulteron7/dev
+ab76a1c - Jitul Teron, 22 hours ago : k8s ingress setup
+1422ac5 - Jitul Teron, 22 hours ago : Update deploy-manifests.yml
+7100913 - Jitul Teron, 23 hours ago : Create deploy-manifests.yml
+8e3848f - Jitul Teron, 23 hours ago : Update deply-auth.yml
+83e0a14 - Jitul Teron, 23 hours ago : Merge pull request #4 from Jitulteron7/dev
+80994ed - Jitul Teron, 23 hours ago : github testing deployment
+16e73d3 - Jitul Teron, 23 hours ago : Merge pull request #3 from Jitulteron7/dev
+4246fd6 - Jitul Teron, 23 hours ago : testing deployment
+aee7234 - Jitul Teron, 23 hours ago : Merge branch 'main' into dev
+ebffcbd - Jitul Teron, 23 hours ago : auth
+a6c24d4 - Jitul Teron, 23 hours ago : Merge pull request #2 from Jitulteron7/dev
+0a75610 - Jitul Teron, 23 hours ago : Create deply-auth.yml
+e112637 - Jitul Teron, 2 days ago : testing test pipeline
+dd217d2 - Jitul Teron, 2 days ago : Merge pull request #1 from Jitulteron7/dev
+b227f39 - Jitul Teron, 2 days ago : auth console.log
+8b1439e - Jitul Teron, 2 days ago : test yaml
+5819283 - Jitul Teron, 2 days ago : testing start order
+efb17bf - Jitul Teron, 2 days ago : Merge branch 'main' of https://github.com/Jitulteron7/ticketing-microservice
+2db5c5e - Jitul Teron, 2 days ago : added test:ci all
+0a54e71 - Jitul Teron, 2 days ago : Create test-tickets.yaml
+3e30063 - Jitul Teron, 2 days ago : Create test-payments.yaml
+bfbab16 - Jitul Teron, 2 days ago : Create test-order.yaml
+020708a - Jitul Teron, 2 days ago : Update and rename test.yml to test-auth.yml
+9974c81 - Jitul Teron, 2 days ago : starting
+92c04e7 - Jitul Teron, 2 days ago : Merge branch 'main' of https://github.com/Jitulteron7/ticketing-microservice
+67ac21a - Jitul Teron, 2 days ago : added test.yaml and  auth package.json test:ci and removed and pasted single gitignore
+9b76cb4 - Jitul Teron, 2 days ago : Create test.yml
+1fb1e15 - Jitul Teron, 3 days ago : complete 85 %
+2094fd0 - Jitul Teron, 5 days ago : expiration just
+fdb9440 - Jitul Teron, 5 days ago : till expiration
+036eb6d - Jitul Teron, 2 weeks ago : auth init setup
+209476e - Jitul Teron, 2 weeks ago : microservice ticketing
