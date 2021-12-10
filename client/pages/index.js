@@ -11,7 +11,7 @@ const LandingPage = ({ currentUser,tickets }) => {
         <a>View</a>
       </Link></td>
     </tr>)
-  })
+  }).reverse()
 
   return (
   <div>

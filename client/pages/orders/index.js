@@ -8,7 +8,7 @@ const OrderIndex = ({ orders }) => {
         </tr>
       </>
     );
-  });
+  }).reverse();
   return (
     <div>
       <h1>Orders </h1>
