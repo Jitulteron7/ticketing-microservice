@@ -111,7 +111,7 @@ Once done, we can use skaffold dev which will automatically handle updates and b
     sudo nano /etc/hosts
     ```
     
-    ### for mac
+    ### for linux
     ```sh
     /etc/hosts
     ```
