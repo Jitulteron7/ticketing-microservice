@@ -116,7 +116,7 @@ Once done, we can use skaffold dev which will automatically handle updates and b
     /etc/hosts
     ```
 
--   #### Add the following secrets using in kubernetes 
+-   #### Add the following secrets in kubernetes cluster
     ```bash
     kubectl create secret generic stripe-secret --from-literal=STRIPE_KEY=stripe_api_key 
     ```
