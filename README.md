@@ -40,7 +40,9 @@ microservices architecture
 
 - [Ngress-nginx] - is an Ingress controller for Kubernetes using NGINX as a reverse proxy and load balancer
 
-- [Github actions] - is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline..
+- [Github actions] - is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline.
+
+- [NATS Streaming Server] - an extremely performant, lightweight reliable streaming platform built on NATS.
 
 
 
